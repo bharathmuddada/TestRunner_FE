@@ -1,0 +1,34 @@
+<h1>Welcome!</h1>
+<!-- <div class="container">Welcome {{ name }}. Welcome to our awesome app.</div> -->
+
+<div class="container">
+  Click here to get customized message
+  <button (click)="getWelcomeMessage()" class="btn btn-success">
+    Get Welcome message
+  </button>
+</div>
+
+<div class="container" *ngIf="welcomeMessageFromService">
+  <H2>Your customized welcome message</H2>
+  {{ welcomeMessageFromService }}
+</div>
+
+<div class="container">
+  Run Tests
+  <ng-container>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="command to run tests"
+      required=""
+    />
+  </ng-container>
+  <button (click)="runAutomatedTests()" class="btn btn-success">
+    Run Tests
+  </button>
+</div>
+<!-- <div class="container">
+  <button style="padding-left: 10px" class="btn btn-success">
+    View Reports
+  </button>
+</div> -->
